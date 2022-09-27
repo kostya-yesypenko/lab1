@@ -13,8 +13,11 @@ def is_correct(str):
         if counter>1:
             print("False, None")
             return False
-        if i.isdigit()==0:
-            counter+=1
+        if i.isdigit()==0 and (i!='+' or i!='-'):
+            print("False, None")
+            return False
+        elif i.isdigit()==0:
+            counter += 1
         else:
             counter=0
     print("True, {0}".format(eval(str)))
