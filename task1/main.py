@@ -16,6 +16,9 @@ def easy_math(first,operation,second):
     elif operation =="*":
         print(first * second)
     elif operation =="/":
+        if second==0:
+            print("Can't divide by zero")
+            return False
         print(first / second)
 
 if __name__=='__main__':
